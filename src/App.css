@@ -1,0 +1,239 @@
+/* 整体页面样式 */
+.App {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  flex-direction: column; /* 垂直排列内容 */
+  margin: 0;
+  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+  background-attachment: fixed; /* 背景固定 */
+  background-size: cover; /* 背景完全覆盖页面 */
+  background-repeat: no-repeat; /* 防止重复 */
+  color: #ffffff;
+}
+
+/* 主标题样式 */
+.main-title {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* 连接按钮样式 */
+.connect-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.connect-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* 已连接信息卡片 */
+.connected-card {
+  background-color: #ffffff;
+  color: #333;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.connected-info {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.connected-info .address {
+  color: #007bff;
+  word-break: break-all;
+}
+
+/* 卡片通用样式 */
+.card {
+  background-color: #ffffff;
+  color: #333;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+/* 按钮样式 */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #ddd;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.primary-button {
+  width: 100%;
+}
+
+.secondary-button {
+  background-color: #28a745;
+}
+
+.secondary-button:hover {
+  background-color: #218838;
+}
+
+/* 输入框样式 */
+.input-box {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* 新增的居中容器样式 */
+.center-container {
+  display: flex;
+  flex-direction: column; /* 垂直排列内容 */
+  justify-content: center; /* 垂直居中 */
+  align-items: center; /* 水平居中 */
+  height: 100vh; /* 占满整个视口高度 */
+  width: 100%; /* 宽度占满整个页面 */
+  background: inherit; /* 继承 App 的背景 */
+  gap: 20px; /* 添加标题和按钮之间的间距 */
+}
+
+/* 空消息样式 */
+.empty-message {
+  color: #666;
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+/* NFT画廊容器 */
+.nft-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 自适应网格布局 */
+  gap: 20px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+/* NFT卡片样式 */
+.nft-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+.nft-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.nft-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.nft-card p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.nft-card button {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nft-card button:hover {
+  background-color: #0056b3;
+}
+
+/* 单个NFT卡片样式 */
+.nft-card {
+  background-color: #dee6ef6d; /* 白色背景 */
+  color: #333; /* 黑色文字 */
+  border-radius: 10px; /* 卡片圆角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+  padding: 15px;
+  text-align: center;
+  width: 400px;
+  transition: all 0.3s ease;
+}
+
+/* 鼠标悬停时的效果 */
+.nft-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.nft-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.nft-card p {
+  font-size: 1em;
+  color: #555;
+}
+
+.nft-card button {
+  margin-top: 10px;
+  background-color: #007bff; /* 按钮颜色 */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nft-card button:hover {
+  background-color: #0056b3; /* 按钮悬停颜色 */
+}
